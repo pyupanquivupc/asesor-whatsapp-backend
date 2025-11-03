@@ -1,0 +1,9 @@
+services:
+  api:
+    build: .
+    image: asesor-whatsapp-backend:dev
+    container_name: asesor-api
+    env_file: .env
+    ports:
+      - "${PORT-8000}:8000"
+    restart: unless-stopped
